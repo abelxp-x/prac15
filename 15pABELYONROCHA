@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Meta Tags del portafolio -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Abel Yon Rocha sobre el uso de meta tags en HTML.">
+  <meta name="keywords" content="meta tags, HTML, SEO, viewport, description, robots, Open Graph">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Portafolio - META TAGS">
+  <meta property="og:description" content="Portafolio de Abel Yon Rocha explicando el uso y la importancia de los meta tags en HTML.">
+  <meta property="og:image" content="img/meta-portada.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Cards Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portafolio - META TAGS">
+  <meta name="twitter:description" content="Conoce el portafolio de Abel Yon Rocha sobre meta tags en HTML.">
+  <meta name="twitter:image" content="img/meta-portada.jpg">
+
+  <title>Portafolio - META TAGS</title>
+  <style>
+    /* Estilos generales del portafolio */
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1a40, #4a148c);
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 60px 20px;
+      animation: fadeIn 1.5s ease-in-out;
+      background: url("fb-meta-tags.webp") no-repeat center center;
+      background-size: cover;
+      height: 300px;
+      position: relative;
+    }
+
+    .header-text {
+      text-align: right;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 3.5em;
+      letter-spacing: 2px;
+      animation: slideInDown 1.5s ease-in-out;
+    }
+
+    .header-text h2 {
+      margin: 10px 0 0;
+      font-size: 2.2em;
+      font-weight: normal;
+      animation: slideInUp 1.5s ease-in-out;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #673ab7;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    section:last-child {
+      border-bottom: none;
+    }
+
+    h3 {
+      color: #ffeb3b;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 10px 0;
+      text-align: justify;
+    }
+
+    .question {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-left: 4px solid #ffeb3b;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .question:hover {
+      transform: scale(1.05);
+    }
+
+    .question strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #ffeb3b;
+    }
+
+    .img-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .img-container img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Estilos del loader */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff; /* Fondo blanco para el loader */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.6s ease;
+    }
+    
+    /* La imagen del loader inicia muy grande y se reduce con la animación */
+    #loader-img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;    
+      animation: zoomOut 2s forwards;
+    }
+    
+    /* Animación del loader:
+       Comienza con la imagen a escala 3 (cubriendo toda la pantalla) y termina en escala 1
+    */
+    @keyframes zoomOut {
+      0% {
+        transform: scale(3);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Ocultar el contenido principal inicialmente */
+    #contenido {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loader con la imagen de inicio -->
+  <div id="loader">
+    <img id="loader-img" src="D:\fb-meta-tags.webp" alt="Meta Tags">
+  </div>
+
+  <!-- Contenido principal del portafolio -->
+  <div id="contenido">
+    <header>
+      <div class="header-text">
+        <h1>ABEL YON ROCHA</h1>
+        <h2>Portafolio de Meta Tags</h2>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h3>¿QUÉ SON LOS META TAGS?</h3>
+        <p>Los meta tags son elementos HTML que se incluyen en el encabezado (<code>&lt;head&gt;</code>) de una página web. Proporcionan información adicional sobre el contenido de la página, la cual es fundamental para los motores de búsqueda, navegadores y otras herramientas, aunque no se muestra directamente al usuario.</p>
+      </section>
+
+      <div class="img-container">
+        <img src="D:\Meta-Tags.jpg" alt="Ejemplo Meta Tags 2">
+      </div>
+
+      <section>
+        <h3>Preguntas de Reflexión</h3>
+        <div class="question">
+          <strong>¿Por qué es importante incluir el meta tag <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code>?</strong>
+          <p>Este meta tag es esencial para asegurar que la página se ajuste al ancho de la pantalla de cualquier dispositivo, mejorando la experiencia de usuario en móviles y tabletas.</p>
+        </div>
+        <div class="question">
+          <strong>¿Cómo ayudan los meta tags a mejorar el posicionamiento en Google?</strong>
+          <p>Los meta tags proporcionan información precisa a los motores de búsqueda sobre el contenido de la página, lo que influye en la indexación y puede mejorar el posicionamiento en los resultados de búsqueda.</p>
+        </div>
+        <div class="question">
+          <strong>¿Qué sucede si no se incluye una meta tag description en la página?</strong>
+          <p>Sin una meta tag description, los motores de búsqueda podrían tener dificultades para entender el contenido de la página, lo que puede afectar negativamente el SEO y disminuir la tasa de clics en los resultados de búsqueda.</p>
+        </div>
+        <div class="question">
+          <strong>¿Cómo los meta tags Open Graph mejoran la forma en que se comparte una página en Facebook?</strong>
+          <p>Los meta tags Open Graph permiten definir un título, descripción e imagen específicos para cuando se comparte la página en Facebook, haciendo que la presentación sea más atractiva y relevante para los usuarios.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Espera a que se cargue toda la página
+    window.addEventListener("load", () => {
+      // Se mantiene el loader visible para apreciar la animación (3 segundos en este ejemplo)
+      setTimeout(() => {
+        const loader = document.getElementById('loader');
+        loader.style.opacity = '0';  // Inicia efecto "fade out"
+        
+        // Tras 600ms (duración de la transición), se oculta el loader y se muestra el contenido
+        setTimeout(() => {
+          loader.style.display = 'none';
+          document.getElementById('contenido').style.display = 'block';
+        }, 600);
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
